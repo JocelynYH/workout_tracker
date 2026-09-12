@@ -1,0 +1,19 @@
+# Xcode
+ios/**/xcuserdata/
+ios/**/*.xcuserstate
+ios/**/DerivedData/
+ios/**/.build/
+ios/**/*.moved-aside
+ios/**/*.hmap
+ios/**/*.ipa
+ios/**/*.dSYM.zip
+ios/**/*.dSYM
+
+# Node / backend
+backend/node_modules/
+backend/data/
+backend/.env
+backend/*.log
+
+# OS
+.DS_Store
