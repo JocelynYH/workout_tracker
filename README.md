@@ -57,6 +57,22 @@ the port is reachable.
 Every endpoint except `/auth/register`, `/auth/login`, and `/health` requires
 the `Authorization: Bearer <token>` header from login/register.
 
+### Seeding exercises from a paper program
+
+`backend/scripts/seed-exercises.js` bulk-creates exercises for an account so
+you're not typing each one into the app by hand. It currently seeds the
+exercise list (deduped, grouped by muscle group) from a sample "3 day a week"
+program. Run it against a running backend:
+
+```bash
+cd backend
+BASE_URL=http://localhost:3000 EMAIL=you@example.com PASSWORD=yourpassword node scripts/seed-exercises.js
+```
+
+If the account doesn't exist yet it's registered automatically. It's safe to
+re-run — exercises that already exist are skipped. Edit the `exercises` array
+at the top of the script to seed your own program instead.
+
 ## 2. Run the iOS app
 
 Open `ios/WorkoutTracker/WorkoutTracker.xcodeproj` in Xcode (15 or newer,
